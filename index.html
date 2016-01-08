@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用CSS样式position:fixed时水平滚动</title>
+	<link rel="stylesheet" href="table.css">
+
+</head>
+<body>
+	<div class="header">
+		<table>
+			<tr>
+				<td width="20%">title1</td>
+				<td width="20%">title2</td>
+				<td width="20%">title3</td>
+				<td width="20%">title4</td>
+				<td width="20%">title5</td>
+			</tr>
+		</table>
+	</div>
+	<div class="content">
+		<table>
+			<tr>
+				<td width="20%">cynthia</td>
+				<td width="20%">lily</td>
+				<td width="20%">lucy</td>	
+				<td width="20%">john</td>
+				<td width="20%">daviad</td>
+			</tr>
+			<tr>
+				<td width="20%">orange</td>
+				<td width="20%">bear</td>
+				<td width="20%">black</td>
+				<td width="20%">white</td>
+				<td width="20%">red</td>
+			</tr>
+		</table>
+
+	</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function(){
+				$(".header").css("left",-$(window).scrollLeft());
+			});
+			$(window).resize(function(){
+				$(".header").css("left",-$(window).scrollLeft());
+			});
+		});
+	</script>
+</body>
+</html>
