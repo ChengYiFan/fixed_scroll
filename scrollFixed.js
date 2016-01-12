@@ -14,9 +14,6 @@
 			settings.originLeft = parseInt(this.css("left"));
 			settings.originRight = parseInt(this.css("right"));
 			var target = this;
-
-			//$(window).resize(this.fixPosition(settings));
-
 			function fixPosition(){
 				if(settings.fixed == "left"){
 					target.css("left",settings.originLeft-$(window).scrollLeft());
