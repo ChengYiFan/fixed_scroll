@@ -27,6 +27,9 @@
 			$(window).scroll(function(){
 				fixPosition();
 			});
+			$(window).resize(function(){
+				fixPosition();
+			});
 		}
 
 	});
